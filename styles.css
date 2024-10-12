@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  #grid {
+    display: grid;
+    grid-template-columns: repeat(15, 80px);
+    grid-template-rows: repeat(6, 80px);
+    gap: 5px;
+    position: relative;
+  }
+  .cell {
+    width: 80px;
+    height: 80px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgray;
+    position: relative;
+  }
+  .start {
+    background-color: green;
+  }
+  .end {
+    background-color: red;
+  }
+  .road {
+    background-color: blue;
+  }
+  .blocked {
+    background-color: black;
+  }
+  .car {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    transition: top 0.5s ease-in-out, left 0.5s ease-in-out;
+  }
+  .hospital {
+    width: 50px;
+    height: 50px;
+
+    background-size: cover;
+    position: absolute;
+  }
+  .button-container {
+    margin-top: 20px;
+  }
+  button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  button:active {
+    background-color: #004085;
+  }
+
+  button:focus {
+    outline: none;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 18px; 
+      margin-bottom: 8px; 
+    }
+
+    p {
+      font-size: 14px; 
+      margin-bottom: 15px;
+    }
+
+    .button-container {
+        margin-top: 15px;
+      }
+  
+      button {
+        margin-right: 0; 
+        margin-bottom: 10px; 
+        padding: 8px 15px; 
+        font-size: 14px; 
+        width: 100%;
+      }
+  }
